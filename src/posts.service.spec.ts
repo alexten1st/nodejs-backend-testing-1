@@ -20,6 +20,6 @@ describe('PostsService', () => {
     const posts = [{text: 'Mocked post1',}, {text: 'Mocked post2',}, {text: 'Mocked post3',}];
     posts.forEach((el)=>postsService.create(el))
 
-    expect(postsService.find('1')!.text).toEqual(post.text)
+    expect(postsService.find('1')).toEqual({text: post.text, id: '1', date: expect.any(String)})
   });
 });
