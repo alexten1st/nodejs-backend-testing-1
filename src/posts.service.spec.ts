@@ -17,8 +17,6 @@ describe('PostsService', () => {
   });
 
   it('should find a post', () => {
-    const posts = [{text: 'Mocked post1',}, {text: 'Mocked post2',}, {text: 'Mocked post3',}];
-    posts.forEach((el)=>postsService.create(el))
 
     expect(postsService.find('1')).toEqual({text: post.text, id: expect.any(String), date: expect.any(String)})
   });
